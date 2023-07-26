@@ -1,1 +1,4 @@
-# Izzu belek
+```js
+console.log("");
+
+```
