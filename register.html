@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SplashScreen</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Start -->
+    <script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+        extend: {
+            spacing: {
+            13: "3.25rem",
+            },
+            fontFamily: {
+            inter: ["Inter"],
+            },
+        },
+        },
+    };
+    </script>
+    <!-- Tailwind End -->
+        
+    <!-- Css Start -->
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        }
+    </style>
+    <!-- Css End -->
+
+</head>
+<body class="dark:bg-gray-900">
+    
+    <!-- Header Start -->
+    <div class="container max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:max-w-full p-10">
+
+        <div class="">
+            <div class="flex justify-center">
+                <img class="w-[10rem]" src="images/feed.png">
+            </div>
+        </div>
+
+        <div class="text-center py-8">
+            <h1 class="text-[#000000] text-3xl font-normal">Get Started Now</h1>
+        </div>
+
+        <form action="">
+            <label class="" for="Email">
+                <h1 class="py-3 text-base font-medium">Enter email address</h1>
+                <input class="w-full py-3 px-10 border-2 border-[#B0B0B0] focus:border-sky-400 rounded-full focus:outline-none focus:shadow-xl" placeholder="Feed@gmail.com" type="email" id="Email">
+            </label>
+
+            <label class="" for="Password">
+                <h1 class="py-3 text-base font-medium">Enter password</h1>
+                <input class="w-full py-3 px-10 border-2 border-[#B0B0B0] focus:border-sky-400 rounded-full focus:outline-none focus:shadow-xl" placeholder="Min. 8 characters" type="password" id="Password">
+            </label>
+
+            <div class="pt-8">
+                <button class="w-full flex items-center relative px-4 py-2 bg-[#E2E2E2] group hover:bg-[#25D1E5] border border-[#B0B0B0] rounded-full hover:shadow-lg">
+                    <div class="w-full text-center">
+                        <h1 class="text-xl font-medium text-[#989898] group-hover:text-[#000000]">Continue</h1>
+                    </div>
+
+                    <div class="absolute w-[10%] right-0">
+                        <img class="w-5 h-5" src="images/Arrow 3.png">
+                    </div>
+                </button>
+            </div>
+        </form>
+
+        <div class="text-center py-5">
+            <h1 class="text-[#989898] text-xl font-medium">atau</h1>
+        </div>
+
+        <div class="" for="Email">
+            <button class="w-full text-center flex justify-center gap-3 px-4 py-3 border border-[#B0B0B0] rounded-full hover:shadow-md">
+                <img class="w-5 h-5" src="images/google.png">
+                <h1 class="text-[#000000] text-sm font-semibold">Sign up with google</h1>
+            </button>
+        </div>
+
+        <div class="pt-3" for="Email">
+            <button class="w-full text-center flex justify-center gap-3 px-4 py-3 border border-[#B0B0B0] rounded-full hover:shadow-md">
+                <img class="w-5 h-5" src="images/github.png">
+                <h1 class="text-[#000000] text-sm font-semibold">Sign up with github</h1>
+            </button>
+        </div>
+
+        <div class="">
+            <div class="text-center py-5">
+                <h1 class="text-[#000000] text-sm font-medium">Sudah punya akun?<a class="hover:underline hover:text-blue-400" href="#"> Login</a></h1>
+            </div>
+        </div>
+
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Script Start -->
+    <script>
+        // DarkMode
+        const checkbox = document.querySelector ('#toggle');
+        const html = document.querySelector ('html');
+
+        checkbox.addEventListener ('click', function () {
+            checkbox.checked ? html.classList.add ('dark') : html.classList.remove ('dark');
+        });
+    </script>
+    <!-- Script End -->
+
+</body>
+</html>

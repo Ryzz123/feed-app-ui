@@ -5,12 +5,6 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>SplashScreen</title>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Tailwind Start -->
@@ -30,35 +24,51 @@
     };
     </script>
     <!-- Tailwind End -->
-
+        
     <!-- Css Start -->
-    <style>
-
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        }
     </style>
     <!-- Css End -->
 
 </head>
-<body class="">
+<body class="dark:bg-gray-900">
     
     <!-- Header Start -->
     <div class="container font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:max-w-full p-10">
 
-        <!-- Pembungkus Avatar -->
-        <div class="w-28 h-28 rounded-full overflow-hidden border-4 lg:border-8 border-gray-400">
+        <div class="flex">
 
-            <!-- Logo Centang Biru -->
-            <div class="absolute w-10 h-10 ml-[64px] mt-[65px]">
-                <img src="images/centang biru.png">
+            <!-- Pembungkus Avatar -->
+            <div class="w-28 h-28 rounded-full overflow-hidden border-4 border-gray-400">
+
+                <!-- Logo Centang Biru -->
+                <div class="absolute w-10 h-10 ml-[64px] mt-[65px]">
+                    <img src="images/centang biru.png">
+                </div>
+
+                <!-- Image Avatar -->
+                <img class="object-cover w-full h-full" src="images/Ellipse 1.png"/>
             </div>
 
-            <!-- Image Avatar -->
-            <img class="object-cover w-full h-full" src="images/Ellipse 1.png"/>
+            <!-- DarkMode -->
+            <div class="flex justify-center mr-12 mt-3">
+                <input class="hidden" type="checkbox" id="toggle">
+                <label for="toggle">
+                    <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                        <div class="w-4 h-4 bg-white rounded-full toggle-circle transition duration-300"></div>
+                    </div>
+                </label>
+            </div>
+
         </div>
 
         <!-- Text Welcome -->
         <div class="">
             <div class="py-8">
-                <h1 class="text-[#000000] text-base font-semibold">Hallo, welcome to my bio</h1>
+                <h1 class="text-[#000000] dark:text-[#ffffff] text-base font-semibold">Hallo, welcome to my bio</h1>
             </div>
         </div>
 
@@ -73,15 +83,21 @@
         <!-- Text Modern Teams -->
         <div class="">
             <div class="py-8">
-                <h1 class="text-[#000000] text-4xl font-bold">Modern teams needmore than just chat</h1>
+                <h1 class="text-[#000000] dark:text-[#ffffff] text-4xl font-bold">Modern teams needmore than just chat</h1>
             </div>
         </div>
 
         <!-- Button Get Started -->
         <div class="">
-            <button class="w-full px-4 py-2 text-xl font-bold text-[#000000] border border-[#000000] rounded-full shadow-lg">
-                <div class="text-center">
-                    <span class="">Get Started</span>
+            <button class="w-full px-4 py-2 border border-[#000000] dark:border-[#ffffff] rounded-full shadow-lg">
+                <div class="flex relative items-center text-center">
+                    <div class="w-full">
+                        <h1 class="text-xl font-bold text-[#000000] dark:text-[#ffffff]">Get Started</h1>
+                    </div>
+                    
+                    <div class="absolute w-[10%] right-0">
+                        <img class="w-5 h-5" src="images/Arrow 1.png">
+                    </div>
                 </div>
             </button>
         </div>
@@ -91,7 +107,13 @@
 
     <!-- Script Start -->
     <script>
+        // DarkMode
+        const checkbox = document.querySelector ('#toggle');
+        const html = document.querySelector ('html');
 
+        checkbox.addEventListener ('click', function () {
+            checkbox.checked ? html.classList.add ('dark') : html.classList.remove ('dark');
+        });
     </script>
     <!-- Script End -->
 
