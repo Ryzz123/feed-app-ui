@@ -1,15 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SplashScreen</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Start -->
+    <script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+        extend: {
+            spacing: {
+            13: "3.25rem",
+            },
+            fontFamily: {
+            inter: ["Inter"],
+            },
+        },
+        },
+    };
+    </script>
+    <!-- Tailwind End -->
+
+    <!-- Css Start -->
+    <style>
+
+    </style>
+    <!-- Css End -->
+
 </head>
-<body>
-    <h1>Rahman Ganteng banget</h1>
-    <h1>Rahman Gaul</h1>
-    <h1>Izzu ganteng</h1>
-    <h1>izzu test9</h1>
-    <h1>izzu test10</h1>
+<body class="">
+    
+    <!-- Header Start -->
+    <div class="container font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:max-w-full p-10">
+
+        <!-- Pembungkus Avatar -->
+        <div class="w-28 h-28 rounded-full overflow-hidden border-4 lg:border-8 border-gray-400">
+
+            <!-- Logo Centang Biru -->
+            <div class="absolute w-10 h-10 ml-[64px] mt-[65px]">
+                <img src="images/centang biru.png">
+            </div>
+
+            <!-- Image Avatar -->
+            <img class="object-cover w-full h-full" src="images/Ellipse 1.png"/>
+        </div>
+
+        <!-- Text Welcome -->
+        <div class="">
+            <div class="py-8">
+                <h1 class="text-[#000000] text-base font-semibold">Hallo, welcome to my bio</h1>
+            </div>
+        </div>
+
+        <!-- Logo & Text -->
+        <div class="">
+            <div class="flex gap-3">
+                <img class="w-5 h-7" src="images/location.png">
+                <h1 class="text-[#A6A6A6] text-base font-semibold ">Selong, Lombok Timur</h1>
+            </div>
+        </div>
+
+        <!-- Text Modern Teams -->
+        <div class="">
+            <div class="py-8">
+                <h1 class="text-[#000000] text-4xl font-bold">Modern teams needmore than just chat</h1>
+            </div>
+        </div>
+
+        <!-- Button Get Started -->
+        <div class="">
+            <button class="w-full px-4 py-2 text-xl font-bold text-[#000000] border border-[#000000] rounded-full shadow-lg">
+                <div class="text-center">
+                    <span class="">Get Started</span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Script Start -->
+    <script>
+
+    </script>
+    <!-- Script End -->
+
 </body>
 </html>
