@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Start -->
+    <script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+        extend: {
+            spacing: {
+            13: "3.25rem",
+            },
+            fontFamily: {
+            inter: ["Inter"],
+            },
+        },
+        },
+    };
+    </script>
+    <!-- Tailwind End -->
+        
+    <!-- Css Start -->
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        }
+    </style>
+    <!-- Css End -->
+
+</head>
+<body class="dark:bg-gray-900">
+    
+    <!-- Header Start -->
+    <div class="container max-w-md mx-auto sm:max-w-xl md:max-w-5xl lg:max-w-full pb-[62px]">
+        
+        <div class="p-5">
+
+            <!-- Pembungkus -->
+            <div class="flex items-center">
+                <div class="flex items-center gap-3">
+
+                    <!-- Icon -->
+                    <div class="">
+                        <img class="w-10" src="images/close.png">
+                    </div>
+
+                    <!-- Text -->
+                    <div class="">
+                        <h1 class="text-xl font-medium text-[#000000]">Edit Profil</h1>
+                    </div>
+                </div>
+
+                <div class="grow"></div>
+
+                <!-- Text -->
+                <div class="">
+                    <h1 class="text-xl font-medium text-[#818080]">Selesai</h1>
+                </div>
+            </div>
+
+            <!-- Pembungkus -->
+            <div class="py-5">
+                <div class="p-4 bg-[#F0F0F0] border-2 border-[#C9C9C9] rounded-2xl">
+
+                    <!-- Text -->
+                    <div class="">
+                        <h1 class="text-base font-semibold text-[#000000]">Nama</h1>
+                    </div>
+
+                    <!-- Pembungkus Icon & Text -->
+                    <div class="flex pb-3 items-center gap-2 border-b-2 border-[#9D9B9B]">
+
+                        <!-- Icon -->
+                        <div class="">
+                            <img class="w-6" src="images/lock.png">
+                        </div>
+
+                        <!-- Text -->
+                        <div class="">
+                            <h1 class="text-xs font-medium text-[#000000]">CODERSTEAM (AkuInginPahala)</h1>
+                        </div>
+
+                        <div class="grow"></div>
+
+                        <!-- Pembungkus Avatar -->
+                        <div class="w-[59px] h-[59px] rounded-full overflow-hidden border-2 border-gray-400">
+
+                            <!-- Image Avatar -->
+                            <img class="object-cover w-full h-full" src="images/Ellipse 1.png"/>
+                        </div>
+                    </div>
+
+                    <!-- Pembungkus -->
+                    <div class="py-3 border-b-2 border-[#9D9B9B]">
+
+                        <!-- Text -->
+                        <h1 class="text-base font-semibold text-[#000000] mb-3">Bio</h1>
+                        <h1 class="text-base font-normal text-[#000000]">Apalah daya ku yang hanya bisa memandang mu tanpa bisa memiliki.</h1>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="py-3">
+                        <h1 class="text-base font-semibold text-[#000000]">Tautan</h1>
+                    </div>
+
+                    <!-- Button -->
+                    <button class="flex pb-3 items-center gap-2">
+                        <img class="w-6" src="images/line.png">
+                        <h1 class="text-xs font-medium text-[#898989]">Tambahkan tautan</h1>
+                    </button>
+
+                    <!-- Pembungkus -->
+                    <div class="flex py-3 border-t-2 border-[#9D9B9B]">
+
+                        <!-- Text -->
+                        <div class="">
+                            <h1 class="text-base font-semibold text-[#000000]">Profile privat</h1>
+                        </div>
+
+                        <div class="grow"></div>
+
+                        <!-- Button -->
+                        <div class="justify-center">
+                            <input class="hidden" type="checkbox" id="toggle">
+                            <label for="toggle">
+                                <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                                    <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pembungkus -->
+        <div class="bg-[#000000] w-full py-5 fixed bottom-0">
+
+            <!-- Icon -->
+            <div class="flex justify-center gap-9">
+                <div class="">
+                    <img class="w-6 h-6" src="images/home 1.png">
+                </div>
+
+                <div class="">
+                    <img class="w-6 h-6" src="images/search.png">
+                </div>
+
+                <div class="">
+                    <img class="w-6 h-6" src="images/add.png">
+                </div>
+
+                <div class="">
+                    <img class="w-7 h-7" src="images/love.png">
+                </div>
+
+                <div class="">
+                    <img class="w-7 h-7" src="images/user 1.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Script Start -->
+    <script>
+
+    </script>
+    <!-- Script End -->
+
+</body>
+</html>
